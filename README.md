@@ -1,14 +1,14 @@
 # code-umbrella
 
 
-def contains_duplicate(nums):
+```def contains_duplicate(nums):
     seen = set()                       # Line 1
     for num in nums:                   # Line 2
         if num in seen:                # Line 3
             return True                # Line 4
         seen.add(num)                  # Line 5
     return False                       # Line 6
-
+```
 Line 1: seen = set()
 
 What happens: Creates an empty set data structure to track numbers we've already encountered
