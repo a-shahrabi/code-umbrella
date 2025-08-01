@@ -15,4 +15,15 @@ What happens: Creates an empty set data structure to track numbers we've already
 Why a set specifically: Sets provide O(1) average lookup time - we can check "have I seen this number before?" almost instantly
 Why not a list: Lists require O(n) time to search through every element - much slower!
 Why write it this way: set() is the most efficient data structure for membership testing
-Memory trade-off: We use extra memory to store seen numbers, but gain massive speed improvements
+Memory trade-off: We use extra memory to store seen numbers, but gain massive speed improvements.
+
+
+2Sum Bruteforce:
+
+def two_sum_brute_force(nums, target):
+    """Brute force solution - check all pairs"""
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+    return []
