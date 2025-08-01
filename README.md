@@ -20,6 +20,7 @@ Memory trade-off: We use extra memory to store seen numbers, but gain massive sp
 
 2Sum Bruteforce:
 
+```
 def two_sum_brute_force(nums, target):
     """Brute force solution - check all pairs"""
     for i in range(len(nums)):
