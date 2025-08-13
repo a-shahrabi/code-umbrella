@@ -11,8 +11,8 @@
 ```
 Line 1: seen = set()
 
-What happens: Creates an empty set data structure to track numbers we've already encountered
-Why a set specifically: Sets provide O(1) average lookup time - we can check "have I seen this number before?" almost instantly
+Creates an empty set data structure to track numbers we've already encountered
+Why a set: Sets provide O(1) average lookup time - we can check "have I seen this number before?" almost instantly
 Why not a list: Lists require O(n) time to search through every element - much slower!
 Why write it this way: set() is the most efficient data structure for membership testing
 Memory trade-off: We use extra memory to store seen numbers, but gain massive speed improvements.
