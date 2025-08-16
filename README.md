@@ -81,3 +81,15 @@ def threeSum(nums):
 # Example run
 print(threeSum([-1, 0, 1, 2, -1, -4]))
 ```
+
+from typing import List
+
+def merge(intervals: List[List[int]]) -> List[List[int]]:
+    intervals.sort(key=lambda x: x[0])  # sort by start
+    merged = []
+    for s, e in intervals:
+        if not merged or s > merged[-1][1]:
+            merged.append([s, e])
+        else:
+            merged[-1][1] = max(merged[-1][1], e)
+    return merged
