@@ -95,3 +95,13 @@ def merge(intervals: List[List[int]]) -> List[List[int]]:
         else:
             merged[-1][1] = max(merged[-1][1], e)
     return merged
+```
+
+Sliding window:
+Old sum = 4 + 2 + 1 = 7
+New sum = 2 + 1 + 7 = ?
+
+
+New sum = (4 + 2 + 1) - 4 + 7
+New sum = Old sum - element_leaving + element_entering
+New sum = 7 - 4 + 7 = 10
