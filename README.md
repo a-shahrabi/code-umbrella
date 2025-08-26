@@ -97,6 +97,7 @@ def merge(intervals: List[List[int]]) -> List[List[int]]:
     return merged
 ```
 
+```
 Sliding window:
 Old sum = 4 + 2 + 1 = 7
 New sum = 2 + 1 + 7 = ?
@@ -105,3 +106,11 @@ New sum = 2 + 1 + 7 = ?
 New sum = (4 + 2 + 1) - 4 + 7
 New sum = Old sum - element_leaving + element_entering
 New sum = 7 - 4 + 7 = 10
+
+approach:
+Start: [2,1,5] → sum = 8
+Slide: Remove 2, Add 1 → [1,5,1] → sum = 8-2+1 = 7
+Slide: Remove 1, Add 3 → [5,1,3] → sum = 7-1+3 = 9  
+Slide: Remove 5, Add 2 → [1,3,2] → sum = 9-5+2 = 6
+Maximum = 9
+```
