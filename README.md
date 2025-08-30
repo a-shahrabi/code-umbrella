@@ -114,3 +114,49 @@ Slide: Remove 1, Add 3 → [5,1,3] → sum = 7-1+3 = 9
 Slide: Remove 5, Add 2 → [1,3,2] → sum = 9-5+2 = 6
 Maximum = 9
 ```
+```
+def containsDuplicate(nums):
+    seen = set()
+    for num in nums:
+        if num in seen:
+            return True
+        seen.add(num)
+    return False
+```
+```
+Step 0 — Start
+
+seen = {} (empty set)
+
+nums = [1, 2, 3, 1]
+
+Step 1 — First number = 1
+
+Check: Is 1 in seen? No
+
+Add 1 to seen
+
+seen now: {1}
+
+Step 2 — Second number = 2
+
+Check: Is 2 in seen? No
+
+Add 2 to seen
+
+seen now: {1, 2}
+
+Step 3 — Third number = 3
+
+Check: Is 3 in seen? No
+
+Add 3 to seen
+
+seen now: {1, 2, 3}
+
+Step 4 — Fourth number = 1
+
+Check: Is 1 in seen? YES
+
+Return True immediately (we found a duplicate).
+```
