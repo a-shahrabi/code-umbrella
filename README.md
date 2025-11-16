@@ -124,39 +124,20 @@ def containsDuplicate(nums):
     return False
 ```
 ```
-Step 0 — Start
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        f = {}
+        for c in s:
+            if c in f:
+                f[c] += 1
+            else:
+                f[c] = 1
+        
+        for c in t:
+            if c not in f: return False
+            elif f[c] == 1: del f[c]
+            else: f[c] -= 1
+        
+        return not f
 
-seen = {} (empty set)
-
-nums = [1, 2, 3, 1]
-
-Step 1 — First number = 1
-
-Check: Is 1 in seen? No
-
-Add 1 to seen
-
-seen now: {1}
-
-Step 2 — Second number = 2
-
-Check: Is 2 in seen? No
-
-Add 2 to seen
-
-seen now: {1, 2}
-
-Step 3 — Third number = 3
-
-Check: Is 3 in seen? No
-
-Add 3 to seen
-
-seen now: {1, 2, 3}
-
-Step 4 — Fourth number = 1
-
-Check: Is 1 in seen? YES
-
-Return True immediately (we found a duplicate).
 ```
